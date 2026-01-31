@@ -28,14 +28,15 @@
       <h1>Jam Box Studios</h1>
       <nav class="main-nav">
         <ul>
-          <li><a href="#main-nav">Home</a></li>
+          <li><a href="#">Home</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="#">Reservation</a></li>
           <li><a href="#">Studio</a></li>
         </ul>
       </nav>
       <!-- change the image source as asked because the older one was not working anymore -->
-      <img src="https://picsum.photos/1200/900" class="banner" alt="random images of nature for decorative purpose">  
+      <!-- alt empty because the images are random and has no meaning for the page, just to don't make things more confusing -->
+      <img src="https://picsum.photos/1200/900" class="banner" alt="">  
     </div>
     </div>
     </header>
@@ -50,15 +51,16 @@
       <!-- adding schema for the personal informations -->
       <article itemscope itemtype="https://schema.org/Person">
       <div class="owner">
-        <h2 itemprop="owner">Meet the owner</h2>
+        <h2>Meet the owner</h2>
         <ul>
           <li itemprop="name">Name: John Doe</li>
           <li itemprop="jobTitle">Title: CEO</li>
           <li itemprop="email">Email: johnjoe@jambox.ca</li>
           <li itemprop="telephone">Phone: 613-000-0000</li>
         </ul>
-        <h2 itemprop="address">Address</h2>
-        <p>
+        <article>
+        <h2 itemscope itemtype="https://schema.org/PostalAddress">Address</h2>
+        <p itemprop="streetAddress">
           Jambox Studios
           123 Guitar Road,
           Musicville, Danceistan
