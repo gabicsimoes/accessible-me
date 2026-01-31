@@ -13,32 +13,51 @@
 </head>
 
 <body>
+  <!-- add skiplinks following the sample of week3 demo-->
+  <nav class="skiplinks">
+    <ul>
+      <li><a href="#main-nav">Skip to main-nav home</li>
+      <li><a href="#contact-section">Skip to contact-section reservation</li>
+    </ul>
+  </nav>
+
+  <!-- add header instead of div to organize the header of the html in a proper tag -->
+  <header>
   <div class="container">
     <div class="site-header">
       <h1>Jam Box Studios</h1>
-      <div class="main-nav">
+      <nav id="main-nav">
         <ul>
-          <li><a href="#">Home</a></li>
+          <li><a href="#main-nav">Home</a></li>
           <li><a href="#">Products</a></li>
           <li><a href="#">Reservation</a></li>
           <li><a href="#">Studio</a></li>
         </ul>
-      </div>
-      <img src="https://placekitten.com/1200/900" class="banner">
+      </nav>
+      <!-- change the image source as asked because the older one was not working anymore -->
+      <img src="https://picsum.photos/1200/900" class="banner" alt="random images of nature for decorative purpose">  
     </div>
+    </div>
+    </header>
+    <!-- add a main for the main content of the page -->
+    <main>
     <div class="main-content">
-      <h1>Welcome to Jam Box</h1>
+      <!-- switch h1>h2 for headings in a proper hierarchy -->
+      <h2>Welcome to Jam Box</h2>
       <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Temporibus laboriosam praesentium nostrum ipsa eveniet, officia deserunt cumque eius esse enim, ipsam accusantium autem nihil quaerat sequi perferendis optio quia veritatis.</p>
       <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam perferendis expedita sed itaque odit ipsam omnis, eos voluptates magni fugit culpa voluptatibus, inventore eaque, eligendi voluptatum! Voluptate iusto error voluptatibus.</p>
+      
+      <!-- adding schema for the personal informations -->
+      <article itemscope itemtype="https://schema.org/Person">
       <div class="owner">
-        <h1>Meet the owner</h1>
+        <h2 itemprop="owner">Meet the owner</h2>
         <ul>
-          <li>Name: John Doe</li>
-          <li>Title: CEO</li>
-          <li>Email: johnjoe@jambox.ca</li>
-          <li>Phone: 613-000-0000</li>
+          <li itemprop="name">Name: John Doe</li>
+          <li itemprop="jobTitle">Title: CEO</li>
+          <li itemprop="email">Email: johnjoe@jambox.ca</li>
+          <li itemprop="telephone">Phone: 613-000-0000</li>
         </ul>
-        <h1>Address</h1>
+        <h2 itemprop="address">Address</h2>
         <p>
           Jambox Studios
           123 Guitar Road,
@@ -46,23 +65,26 @@
           B3T 0L0
         </p>
       </div>
-      <div class="contact-section">
-        <h1>Contact Us</h1>
+      </article>
+
+      <div id="contact-section">
+        <h2>Contact Us</h2>
         <form action="thanks.html">
-          <label>Full Name</label>
-          <input type="text" placeholder="Full Name">
-          <input type="text" placeholder="Email">
-          <input type="text" placeholder="Subject">
+          <label>
+          <input type="fullname" placeholder="Full Name" name="Full Name">
+          <input type="email" placeholder="Email" name="Email">
+          <input type="text" placeholder="Subject" name="Subject">
           <b>Your Message</b>
           <textarea></textarea>
           <button type="submit">Send</button>
+          </label>
         </form>
       </div>
     </div>
-    <div class="site-footer">
+    <!-- switch div for footer to a footer part of the website -->
+    <footer class="site-footer">
       &copy; 2021 Jam Box Studios
-    </div>
-  </div>
+    </footer>
+  </main>
 </body>
-
 </html>
