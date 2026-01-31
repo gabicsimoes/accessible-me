@@ -66,6 +66,30 @@ form button {
   text-transform: uppercase;
 }
 
+/* adjusting the button send to increase the contrast for people who has blind issues */
+form button:hover{
+  background-color: black;
+  color: white;
+}
+
 .site-footer {
   padding: 2rem 0;
+}
+
+/* hiding the skip links but adding focus on it to increase the experience for people who uses keyboard to navigate */
+/* this position relative is to set a reference point for the future position absolute used to -skiplink a- to hidden the skiplinks on the page */
+.skiplinks ul {
+  position: relative;
+  list-style: none;
+}
+
+.skiplinks a {
+  position: absolute;
+  top: -10em;
+}
+
+.skiplinks a:focus {
+  background-color: black;
+  color: white;
+  top: 0;
 }
